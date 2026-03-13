@@ -1,0 +1,139 @@
+\documentclass{ctexart}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{CJKutf8}
+\usepackage{CJKpunct}
+
+\title{一元三次方程}
+\author{笙}
+
+\begin{document}
+\tableofcontents
+\maketitle
+
+
+\begin{abstract}
+补充内容.一元三次方程.
+\end{abstract}
+
+\section{概念}
+
+\subsection{定义}
+
+形如$y=ax^3+bx^2+cx+d (a\neq 0)$的函数。
+
+在高中范围内，我们习惯性关注一元三次方程$ax^3+bx^2+cx+d=0(a\neq 0)$在实数域上的解。
+
+\section{一元三次方程}
+
+\subsection{韦达公式}
+
+\begin{equation}
+    x_1x_2x_3=-\frac{d}{a}
+\end{equation}
+
+\begin{equation}
+    x_1x_2+x_1x_3+x_2x_3=\frac{c}{a}
+\end{equation}
+
+\begin{equation}
+    x_1+x_2+x_3=-\frac{b}{a}
+\end{equation}
+
+
+\subsection{盛金公式}
+
+对方程\textbf{$ax^3+bx^2+cx+d=0(a\neq 0)$}。
+
+\bigskip
+
+有\textbf{重根判别式}：
+
+\begin{align}
+    \begin{cases}
+        A=b^2-3ac\\
+        B=bc-9ad\\
+        C=c^2-3bd
+    \end{cases}    
+\end{align}
+
+\textbf{总判别式}
+
+\begin{equation}
+    \Delta=B^2-4AC
+\end{equation}
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $\Delta \textgreater 0$ & 方程有一个实根和两个共轭副根 \\
+        \hline
+        $\Delta = 0$ & 方程有三个实根(含有一个二重根)\\
+        \hline
+        $\Delta \textless 0$ & 方程有三个互不相等的实根 \\ 
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{$\Delta \textgreater 0$}
+
+令$Y_1$、$Y_2$为：
+
+\begin{equation}
+    Y_{1,2}=Ab+3a(\frac{-B\pm \sqrt{B^2-4AC}}{2})
+\end{equation}
+
+实根：
+
+\begin{equation}
+    X_1=\frac{-b-(\sqrt[3]{Y_1}+\sqrt[3]{Y_2})}{3a}
+\end{equation}
+
+共轭复根：
+\begin{equation}
+    X_{2,3}=\frac{-b+\frac{1}{2}(\sqrt[3]{Y_1}+\sqrt[3]{Y_2})\pm \frac{\sqrt{3}}{2}(\sqrt[3]{Y_1}-\sqrt[3]{Y_2})i}{3a}
+\end{equation}
+
+\subsection{$\Delta = 0$}
+
+令$K=\frac{B}{A}$。
+
+单根：
+
+\begin{equation}
+    X_1=-\frac{b}{a}+K
+\end{equation}
+
+二重根：
+
+\begin{equation}
+    X_{2,3}=-\frac{K}{2}
+\end{equation}
+
+\subsection{$\Delta \textless 0$}
+
+令$\theta$、$T$分别为：
+
+\begin{equation}
+    \theta=\arccos T
+\end{equation}
+
+\begin{equation}
+    T=\frac{2Ab-3aB}{2\sqrt{A^3}}
+\end{equation}
+
+则根为：
+
+\begin{equation}
+    X_1=\frac{-b-2\sqrt{A}\cos\frac{\theta}{3}}{3a}
+\end{equation}
+
+\begin{equation}
+    X_{2,3}=\frac{-b+\sqrt{A}(\cos\frac{\theta}{3}\pm \sqrt{3}\sin\frac{\theta}{3})}{3a}
+\end{equation}
+
+\end{document}
